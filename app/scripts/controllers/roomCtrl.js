@@ -8,3 +8,6 @@
          .module('blocChat')
          .controller('RoomCtrl', ['$scope', 'Room', RoomCtrl]);
  })();
+
+
+//added scope, and Room to both the .controller and function
