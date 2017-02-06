@@ -1,6 +1,12 @@
-<h1>{{home.title}} </h1>
-<p ng-repeat="room in home.rooms">
-{{room.$value}}
-
-
-</p>
+<section ng-controller="HomeCtrl as home" class="container">
+    <div class="sidebar column fourth">
+        <h1 class="sidebar-title">Bloc Chat</h1>
+        <div ng-repeat="room in home.chatRooms" class="chatrooms" ng-click="home.setRoom(room)">
+            <p class="rooms-list">{{ room.name }}</p>
+        </div>
+        <div class="new-chat-room">
+            <button class="btn btn-primary" ng-click="home.openModal()">New Chat Room</button>
+        </div>
+    </div>
+   
+</section>
