@@ -1,0 +1,133 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+.container.narrow {
+    max-width: 45rem;
+}
+ 
+@media (min-width: 640px) {
+    html { font-size: 112%; }
+      
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+     }
+
+     .column.full { width: 100%; }
+     .column.two-thirds { width: 66.7%; }
+     .column.half { width: 50%; }
+     .column.third { width: 33.3%; }
+     .column.fourth { width: 25%; }
+     .column.flow-opposite { float: right; }  
+ }
+ 
+@media (min-width: 1024px) {
+    html { font-size: 120%; }
+}
+
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Open Sans';
+    color: black;
+    background-color: whitesmoke;
+    min-height: 100%;
+    padding-bottom: 200px;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.side-bar {
+    left: 0%;
+    width: 15%;
+    position: fixed;
+    height: 100%;
+    color: blue;
+    background: rgba(153, 221, 255, 0.5);
+    text-align: center;
+}
+
+.side-bar-pad {
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 3px solid white;
+}
+
+.modal-box {
+    position:absolute;
+    width:350px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -40px;
+    padding: 6px;
+    border-width: 7px;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.chatroom {
+    float: right;
+    margin-left: 10%;
+    width: 85%;
+    height: 80%;
+    background-color: white;
+    color: blue;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    opacity: 0.75;
+}
+
+.chat-title {
+    padding-top: 10px;
+}
+
+.message-field {
+    bottom: 0;
+    padding-bottom: 30px;
+    position: fixed;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.messages {
+  margin-top: 10px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.buffer-bar {
+  padding-top: 5px;
+  margin-top: 10px;
+	border-top: 3px solid grey;
+}
+
