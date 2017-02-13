@@ -1,20 +1,19 @@
-(function() {
+(function () {
+    "use strict";
     function config($stateProvider, $locationProvider) {
         $locationProvider
             .html5Mode({
                 enabled: true,
                 requireBase: false
             });
-        
         $stateProvider
-            .state('rooms', {
-            url: '/',
-            controller: 'RoomCtrl',
-            templateUrl: 'templates/rooms.html'
+            .state('home', {
+                url: '/',
+                controller: 'HomeCtrl',
+                templateUrl: '/templates/home.html'
             });
     }
-    
     angular
-        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
+        .module('blocChat', ['firebase', 'ui.router', 'ui.bootstrap','ngCookies'])
         .config(config);
-})();
+}());
