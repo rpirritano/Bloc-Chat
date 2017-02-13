@@ -1,24 +1,23 @@
-(function() {
+(function () {
     function Room($firebaseArray) {
-        var ref = firebase.database().ref().child("rooms");
-        var rooms = $firebaseArray(ref);
-        var messageReference = firebase.database().ref().child("messages").orderByChild('roomId');
+        var ref = firebase.database().ref();
+        var rooms = $firebaseArray(ref.child('rooms'));
         
-        
-        var addChatRoom = function(newRoom) {
-            rooms.$add({name: newRoom});
+        var addRoom = function (roomName) {
+            rooms.$add({
+                name: roomName,
+                dateCreated: firebase.database.ServerValue.TIMESTAMP
+            });
         };
-        
-       
         
         return {
             all: rooms,
-            createRoom: addChatRoom,
-           
+            add: addRoom
         };
+
     }
     
     angular
         .module('blocChat')
-        .factory('Room', ['$firebaseArray', Room])
-})();
+        .factory('Room', ['$firebaseArray', Room]);
+}());
