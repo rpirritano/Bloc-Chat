@@ -1,8 +1,8 @@
 (function () {
+    "use strict";
     function CookiesCtrl($cookies, $uibModalInstance) {
-        this.setUsername = function () {
-            $cookies.blocChatCurrentUser = this.newUsername;
-            $uibModalInstance.close($cookies.blocChatCurrentUser);
+        this.setUsername = function (username) {
+            $uibModalInstance.close($cookies.put('blocChatCurrentUser', username));
         };
     }
     

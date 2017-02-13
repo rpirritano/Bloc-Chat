@@ -10,6 +10,13 @@
     </div>
     <div class="message-container">
         <h2 class="message-active-room">{{ home.activeRoom.name }}</h2>
-        <p ng-repeat="message in home.activeMessages" class="message-body">{{ message.content }}</p>
+        <p ng-repeat="message in home.activeMessages" class="message-body">
+            {{ message.username }} - {{ message.content }} at {{ message.sentAt }}
+        </p>
+        <div class="new-message" ng-show="home.activeRoom">
+            {{ home.currentUser }}:
+            <input class="message-input" ng-model="home.newMessage">
+            <button class="btn btn-primary" type="button" ng-click="home.sendMessages(home.newMessage)">Send Message</button>
+        </div>
     </div>
 </section>

@@ -1,5 +1,4 @@
 (function () {
-    "use strict";
     function config($stateProvider, $locationProvider) {
         $locationProvider
             .html5Mode({
@@ -14,6 +13,6 @@
             });
     }
     angular
-        .module('blocChat', ['firebase', 'ui.router', 'ui.bootstrap','ngCookies'])
+        .module('blocChat', ['firebase', 'ui.router', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 }());
