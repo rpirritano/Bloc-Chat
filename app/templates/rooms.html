@@ -11,10 +11,10 @@
 <section class="chatroom" ng-show="roomName != null">
     <h1 class="chat-title">{{ roomName}}</h1>
     <div class="buffer-bar"></div>
-    <ul class="messages" ng-repeat="message in messages">
-        <p>{{message.userName}} {{message.sentAt}}</p>
-        <p>{{message.content}}</p>
-        
+    <ul>
+        <li class="messages" ng-repeat="message in messages">
+            <p>{{message.userName}} {{message.sentAt}}</p>
+            <p>{{message.content}}</p>
+        </li>
     </ul>
- 
 </section>
